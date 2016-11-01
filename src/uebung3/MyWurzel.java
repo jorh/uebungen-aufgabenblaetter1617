@@ -1,7 +1,7 @@
 package uebung3;
 
 public class MyWurzel {
-
+	
 	public static String sqrt(int n) {
 		int sqr = 0;
 		int result = 0;
