@@ -12,10 +12,13 @@ public class Euler {
 			erg = erg + (x^i/fak);			
 		}
 		System.out.println("Die Potenz von e hoch "+x+" ist "+ erg);
+		return erg;
 	}
-	
 	public static double myExpFast(int x){
 		// TODO beschleunige myExp()
 	}
-
+	
+	public static void main(String[] args) {
+		System.out.println(myExp(2));
+	}
 }
