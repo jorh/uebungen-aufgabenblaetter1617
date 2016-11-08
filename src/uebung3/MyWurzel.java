@@ -5,9 +5,10 @@ public class MyWurzel {
 	public static String sqrt(int n) {
 		int sqr = 0;
 		int result = 0;
-		for (; result < n; sqr++) {
+		for (; result< n; sqr++) {
 			result = sqr * sqr;
 		}
+		sqr--;
 		if (result == n) {
 			return "Die Wurzel aus " + n + " ist " + sqr;
 		} else {
