@@ -5,9 +5,9 @@ public class Euler {
 	public static double myExp(int x) {
 		// TODO berechne e^x mittels der auf Aufgabenblatt 2 angegebenen Formel
 		double erg = 1;
-		int n = 5;
-		int fak=1;
-		int potenz = 1;
+		int n = 10;
+		double fak = 1;
+		double potenz = 1;
 		for (int i=1;i<n;i++){
 			fak = fak*i;
 			potenz = potenz*x;
