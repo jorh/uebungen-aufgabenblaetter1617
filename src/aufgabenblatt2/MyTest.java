@@ -10,11 +10,11 @@ public class MyTest {
 
 	@Test
 	public void testMathExpVsMyExp(){
-			Assert.assertEquals(Math.exp(5.0),Euler.myExp(5,20), .1);
-			for(int i = 1; i<= 20; i++){
-				Assert.assertEquals(Math.exp(1.),Euler.myExp(1,i), 5);
-				System.out.println("Fehlerterm:" +(Math.exp(1)-Euler.myExp(1, i)));
-				System.out.println("n="+i);
+			//Assert.assertEquals(Math.exp(5.0),Euler.myExp(5,20), .1);
+			for(double i = 1; i<= 1; i++){
+				Assert.assertEquals(Math.exp(i.),Euler.myExp(i,18), .1);
+				System.out.println("Fehlerterm:" +(Math.exp(i)-Euler.myExp(i, 18)));
+				System.out.println("x="+i);
 			}
 	
 	}
