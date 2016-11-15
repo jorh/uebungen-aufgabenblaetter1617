@@ -1,6 +1,7 @@
 package uebung4;
 
-public class Cow {
+class Cow {
+	private static int cowCounter = 0;
 	private String name = "Ich habe noch keinen Namen"; // Name der Kuh
 	private int alter;
 	
@@ -8,6 +9,7 @@ public class Cow {
 	public Cow(String name, int alter){
 		this.name = name;
 		this.alter = alter;
+		cowCounter++;
 	}
 	public Cow(int alter){
 		this.alter = alter;
@@ -21,6 +23,9 @@ public class Cow {
 	}
 	public int getAlter(){
 		return this.alter;
+	}
+	public int getcowCounter(){
+		return cowCounter;
 	}
 	
 }

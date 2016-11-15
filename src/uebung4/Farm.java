@@ -1,6 +1,7 @@
 package uebung4;
 
-public class Farm {
+
+class Farm {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -14,7 +15,12 @@ public class Farm {
 		System.out.println(cow2.getName()+" ist "+cow2.getAlter()+" Monate alt.");
 		System.out.println(cow3.getName()+" ist "+cow3.getAlter()+" Monate alt.");
 		System.out.println(cow4.getName()+" ist "+cow4.getAlter()+" Monate alt.");
+		// Übung 5
 		
+		Cow cow5 = new Cow("Peter", 24); 
+		Cow cow6 = new Cow("Anneliese", 30);
+		Cow cow7 = new Cow("Olaf", 12);
+		System.out.println("CowCounter: "+cow7.getcowCounter());
 	}
 
 }
