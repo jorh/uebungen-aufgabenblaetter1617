@@ -15,10 +15,10 @@ public class Rational {
 		System.out.println("Zähler = "+zähler);
 		System.out.println("Nenner = "+nenner);
 	}
-	public int setZähler(int zähler){
+	public void setZähler(int zähler){
 		this.zähler = zähler;
 	}
-	public int setNenner(int nenner){
+	public void setNenner(int nenner){
 		this.nenner = nenner;
 	}
 	public static void main(String[] args) {
