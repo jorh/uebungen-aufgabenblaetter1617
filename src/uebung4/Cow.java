@@ -4,6 +4,7 @@ class Cow {
 	private static int cowCounter = 0;
 	private String name = "Ich habe noch keinen Namen"; // Name der Kuh
 	private int alter;
+	private boolean hungry = true;
 	
 	// Konstruktor 
 	public Cow(String name, int alter){
@@ -26,6 +27,15 @@ class Cow {
 	}
 	public int getcowCounter(){
 		return cowCounter;
+	}
+	public void fuettern (){
+		hungry = false;
+	}
+	public void toggleHungry(){
+		hungry = !hungry;
+	}
+	public boolean getHungry(){
+		return hungry;
 	}
 	
 }

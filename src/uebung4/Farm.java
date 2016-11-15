@@ -21,6 +21,13 @@ class Farm {
 		Cow cow6 = new Cow("Anneliese", 30);
 		Cow cow7 = new Cow("Olaf", 12);
 		System.out.println("CowCounter: "+cow7.getcowCounter());
+		Farmer bauer = new Farmer();
+		System.out.println("Hungerstatus der Kuh: "+ cow7.getHungry());
+		bauer.feedCow(cow7);
+		System.out.println("Hungerstatus der Kuh: "+ cow7.getHungry());
+		System.out.println("Hungerstatus der Kuh: "+ cow1.getHungry());
+		bauer.feedCow(cow1);
+		System.out.println("Hungerstatus der Kuh: "+ cow1.getHungry());
 	}
 
 }

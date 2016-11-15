@@ -2,7 +2,7 @@ package aufgabenblatt3;
 
 //<<<<<<< HEAD
 // Jonathan Rhode
-
+// 
 //=======
 class Rational {
 
@@ -50,7 +50,8 @@ class Rational {
 	}
 	
 	private double reduce(){
-		return;
+		double kurz;
+		return kurz;
 	}
 	
 	private void add (double zähler2, double nenner2){
