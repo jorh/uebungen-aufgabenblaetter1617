@@ -49,13 +49,30 @@ class Rational {
 		return dezimal;
 	}
 	
-	private double reduce(){
-		double kurz;
-		return kurz;
+	private double reduce(int zähler, int nenner){
+		int kzähler, knenner;
+		int ggT = ggT(zähler, nenner);
+		kzähler = zähler/ggT;
+		knenner = nenner/ggT;
+		System.out.println("Der gekürzte Bruch lautet: "+kzähler+"/"+knenner);
+		return kzähler;
+		
 	}
 	
+	//Bestimmung des größten gemeinsamen Teilers
+	private static int ggT(int zahl1, int zahl2) {
+		   while (zahl2 != 0) {
+		     if (zahl1 > zahl2) {
+		       zahl1 = zahl1 - zahl2;
+		     } else {
+		       zahl2 = zahl2 - zahl1;
+		     }
+		   }
+		   return zahl1;
+		 }
 	private void add (double zähler2, double nenner2){
-		
+//zähler=z ähler*nenner2;
+//zähler2 =;
 	}
 	
 	public static void main(String[] args) {
@@ -75,7 +92,9 @@ class Rational {
 		// Teilschritt 09
 		System.out.println("Dezimalwert: "+rational.toDouble());
 		// Teilschritt 10
-		
+		rational.reduce(5,25);
 		// Teilschritt 11
+		
 	}
 }
+
