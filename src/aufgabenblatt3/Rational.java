@@ -12,7 +12,7 @@ class Rational {
 	
 	// Konstruktor
 	
-	 Rational (){
+	Rational (){
 		zähler = 0;
 		nenner = 1;
 	}
