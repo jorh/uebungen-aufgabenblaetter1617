@@ -12,7 +12,7 @@ class Rational {
 	
 	// Konstruktor
 	
-	Rational (){
+	private Rational (){
 		zähler = 0;
 		nenner = 1;
 	}
@@ -23,7 +23,7 @@ class Rational {
 	
 	// Methoden
 	private void  printRational(){
-		System.out.println("Der Bruch lautet: "+zähler+"/"+nenner);
+		System.out.println("Der Bruch lautet: "+getZähler()+"/"+getNenner());
 	}
 	
 	private void setZähler(int zähler){
@@ -32,6 +32,14 @@ class Rational {
 	
 	private void setNenner(int nenner){
 		this.nenner = nenner;
+	}
+	
+	private double getZähler(){
+		return zähler;
+	}
+	
+	private double getNenner(){
+		return nenner;
 	}
 	
 	private void negate (double zahl){
@@ -96,7 +104,23 @@ class Rational {
 		rational.add(33, 12);
 		rational.reduce();
 		rational.printRational();
-		ImmutableRational immutable = new ImmutableRational(23,455);
+		// Aufgabe 1.2
+		ImmutableRational immutable = new ImmutableRational(25,450);
+		System.out.println("--------------------------------");
+		System.out.println("zweite Klasse");
+		immutable.printRational(immutable.getZähler(),immutable.getNenner());
+		double dezimalzahl = immutable.negate(34.565767);
+		System.out.println("Negierte Zahl = "+dezimalzahl);
+		System.out.println("Invertieren");
+		immutable.printRational(immutable.getZähler(),immutable.getNenner());
+		immutable.invert();
+		immutable.printRational(immutable.getZähler(),immutable.getNenner());
+		System.out.println("Dezimalwert: "+immutable.toDouble());
+		System.out.println("Kürzen");
+		immutable.reduce(immutable.getZähler(),immutable.getNenner());
+		immutable.printRational(immutable.getZähler(),immutable.getNenner());
+		System.out.println("Addieren");
+		immutable.add(33, 12);
 	}
 }
 
