@@ -12,7 +12,7 @@ class Rational {
 	
 	// Konstruktor
 	
-	private Rational (){
+	 Rational (){
 		zähler = 0;
 		nenner = 1;
 	}
@@ -96,6 +96,7 @@ class Rational {
 		rational.add(33, 12);
 		rational.reduce();
 		rational.printRational();
+		ImmutableRational immutable = new ImmutableRational(23,455);
 	}
 }
 
