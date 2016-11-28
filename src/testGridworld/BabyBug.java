@@ -20,7 +20,7 @@ public class BabyBug extends DisposableBug {
 	
 	public void act (){
 		super.act();
-		if (z==3){
+		if (z==4){
 			 Grid<Actor> gr = getGrid();
 			 Location loc = getLocation();
 			 this.removeSelfFromGrid();
@@ -60,7 +60,7 @@ public class BabyBug extends DisposableBug {
         if (!gr.isValid(next))
             return false;
         Actor neighbor = gr.get(next);
-        if (neighbor != null) z++;
+        if (neighbor instanceof Flower) z++;
         return (neighbor == null) || (neighbor instanceof Flower);  
        
     }
