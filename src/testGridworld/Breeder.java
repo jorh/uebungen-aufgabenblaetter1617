@@ -10,7 +10,7 @@ import gridworld.framework.grid.Location;
 public class Breeder extends DisposableBug {
 
 	public Breeder (){
-		setColor(Color.RED);
+		this.setColor(Color.RED);
 	}
 	
 	@Override

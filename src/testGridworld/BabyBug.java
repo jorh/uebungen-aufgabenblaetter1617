@@ -12,12 +12,11 @@ public class BabyBug extends DisposableBug {
 	private int z = 0;
 	
 	public BabyBug (){
-		setColor(Color.YELLOW);
+		this.setColor(Color.YELLOW);
 		
 	}
 	
 	@Override 
-	
 	public void act (){
 		super.act();
 		if (z==4){
@@ -33,7 +32,6 @@ public class BabyBug extends DisposableBug {
 				breeder.putSelfInGrid(gr, loc);
 			}
 		}
-		//z++;
 	}
 	
 	@Override
