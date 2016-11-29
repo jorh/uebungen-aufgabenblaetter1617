@@ -5,37 +5,39 @@ package aufgabenblatt3;
 // 
 //=======
 class Rational {
+	
+	//Sehr gut. Nur eine kleine Formatierung-Anmerkung :)
 
 	// TODO fuelle diese Klasse mit den Methoden von Aufgabenblatt 3
-	private double z‰hler, nenner;
+	private double z√§hler, nenner;
 	private double zahl;
 	
 	// Konstruktor
 	
 	private Rational (){
-		z‰hler = 0;
+		z√§hler = 0;
 		nenner = 1;
 	}
-	private Rational (int z‰hler, int nenner){
-		this.z‰hler = z‰hler;
+	private Rational (int z√§hler, int nenner){
+		this.z√§hler = z√§hler;
 		this.nenner = nenner;
 	}
 	
 	// Methoden
 	private void  printRational(){
-		System.out.println("Der Bruch lautet: "+getZ‰hler()+"/"+getNenner());
+		System.out.println("Der Bruch lautet: "+getZ√§hler()+"/"+getNenner());
 	}
 	
-	private void setZ‰hler(int z‰hler){
-		this.z‰hler = z‰hler;
+	private void setZ√§hler(int z√§hler){
+		this.z√§hler = z√§hler;
 	}
 	
 	private void setNenner(int nenner){
 		this.nenner = nenner;
 	}
 	
-	private double getZ‰hler(){
-		return z‰hler;
+	private double getZ√§hler(){
+		return z√§hler;
 	}
 	
 	private double getNenner(){
@@ -47,23 +49,23 @@ class Rational {
 	}
 	
 	private void invert(){
-		double aa = z‰hler;
-		z‰hler = nenner;
+		double aa = z√§hler;
+		z√§hler = nenner;
 		nenner = aa;
 	}
 	
-	private double toDouble (){ //Berechnet den Dezimalwert von Z‰hler und Nenner
-		double dezimal = (z‰hler/nenner);
+	private double toDouble (){ //Berechnet den Dezimalwert von Z√§hler und Nenner
+		double dezimal = (z√§hler/nenner);
 		return dezimal;
 	}
 	
 	private void reduce(){
-		double ggT = ggT(z‰hler, nenner);
-		z‰hler = z‰hler/ggT;
+		double ggT = ggT(z√§hler, nenner);
+		z√§hler = z√§hler/ggT;
 		nenner = nenner/ggT;		
 	}
 	
-	//Bestimmung des grˆﬂten gemeinsamen Teilers
+	//Bestimmung des gr√∂√üten gemeinsamen Teilers
 	private static double ggT(double zahl1, double zahl2) {
 		   while (zahl2 != 0) {
 		     if (zahl1 > zahl2) {
@@ -73,12 +75,12 @@ class Rational {
 		     }
 		   }
 		   return zahl1;
-		 }
-	private void add (double z‰hler2, double nenner2){
-		z‰hler = z‰hler*nenner2;
-		z‰hler2 = z‰hler2*nenner;
+		 }						//Achtung, Formatierung :)
+	private void add (double z√§hler2, double nenner2){
+		z√§hler = z√§hler*nenner2;
+		z√§hler2 = z√§hler2*nenner;
 		nenner = nenner*nenner2;
-		z‰hler = z‰hler+z‰hler2;
+		z√§hler = z√§hler+z√§hler2;
 	}
 	
 	public static void main(String[] args) {
@@ -86,7 +88,7 @@ class Rational {
 		// Teilschritt 05
 		Rational rational = new Rational(); 
 		rational.setNenner(101);
-		rational.setZ‰hler(20);
+		rational.setZ√§hler(20);
 		rational.printRational();
 		// Teilschritt 07
 		rational.negate(34.565767);
@@ -108,17 +110,17 @@ class Rational {
 		ImmutableRational immutable = new ImmutableRational(25,450);
 		System.out.println("--------------------------------");
 		System.out.println("zweite Klasse");
-		immutable.printRational(immutable.getZ‰hler(),immutable.getNenner());
+		immutable.printRational(immutable.getZ√§hler(),immutable.getNenner());
 		double dezimalzahl = immutable.negate(34.565767);
 		System.out.println("Negierte Zahl = "+dezimalzahl);
 		System.out.println("Invertieren");
-		immutable.printRational(immutable.getZ‰hler(),immutable.getNenner());
+		immutable.printRational(immutable.getZ√§hler(),immutable.getNenner());
 		immutable.invert();
-		immutable.printRational(immutable.getZ‰hler(),immutable.getNenner());
+		immutable.printRational(immutable.getZ√§hler(),immutable.getNenner());
 		System.out.println("Dezimalwert: "+immutable.toDouble());
-		System.out.println("K¸rzen");
-		immutable.reduce(immutable.getZ‰hler(),immutable.getNenner());
-		immutable.printRational(immutable.getZ‰hler(),immutable.getNenner());
+		System.out.println("K√ºrzen");
+		immutable.reduce(immutable.getZ√§hler(),immutable.getNenner());
+		immutable.printRational(immutable.getZ√§hler(),immutable.getNenner());
 		System.out.println("Addieren");
 		immutable.add(33, 12);
 	}

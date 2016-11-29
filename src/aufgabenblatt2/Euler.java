@@ -1,6 +1,8 @@
 package aufgabenblatt2;
 
 public class Euler {
+	
+	//Sehr gut. Keine Anmerkungen
 
 	public static double myExp(double x, int n) {
 		// TODO berechne e^x mittels der auf Aufgabenblatt 2 angegebenen Formel

@@ -11,8 +11,9 @@ public class test {
     {
         ActorWorld world = new ActorWorld();
         DisposableBug käfer = new DisposableBug();
-        world.add(käfer);
-        
+      //  world.add(käfer);
+        Breeder breeder = new Breeder();
+        world.add(breeder);
         world.show();
     }
 
