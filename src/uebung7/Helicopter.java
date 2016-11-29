@@ -20,9 +20,9 @@ public class Helicopter implements CanMoveHorizontally, CanMoveVertically {
 	@Override
 	public void move() {
 		// TODO Auto-generated method stub
-		z = z+speed;
-		y = y+Math.sin(rad)*speed;
-		x = x+Math.cos(rad)*speed;
+		z = z+vSpeed;
+		y = y+Math.sin(rad)*hSpeed;
+		x = x+Math.cos(rad)*hSpeed;
 		if(z<0){ 
 			z=0;
 			vSpeed = 0;
