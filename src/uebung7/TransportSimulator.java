@@ -24,7 +24,7 @@ public class TransportSimulator {
 					((CanMoveHorizontally)mov).turnBy(Math.PI/2);
 				}
 				mov.move();
-				System.out.println(mov); //Ruft die toString Methode auf
+				System.out.println(mov); //Ruft die Methode toString() auf
 			}
 		}
 	}
@@ -32,7 +32,7 @@ public class TransportSimulator {
 	 public static void main(String[] args){
 		 TransportSimulator simulator = new TransportSimulator();
 		 simulator.passengerFleet.add(new Elevator("Fahrstuhl 1", 5));
-		 simulator.passengerFleet.add(new Ship("Schiff 1", 0, 0));
+		 simulator.passengerFleet.add(new Ship("Schiff 1", 1, -10));
 		 simulator.passengerFleet.add(new Helicopter("Heli 1", 10, 10, 10));
 		 simulator.simulate(10);
 	 }
