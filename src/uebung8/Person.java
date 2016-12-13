@@ -1,12 +1,15 @@
 package uebung8;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Person {
 	
 	private String name;
 	private int alter;
+	private boolean hungry;
 	
 	public Person(String name, int alter){
 		this.name = name;
@@ -27,35 +30,13 @@ public class Person {
 		Person peter = new Person("Peter",25);
 		Person paula = new Person("Paula",34);
 		Person paul = new Person("Paul",12);
-//		System.out.println(peter);
-//		peter.altern();
-//		System.out.println(peter);
-		List<Person> personen = new ArrayList<>();
-		personen.add(peter);
-		personen.add(paul);
-		personen.add(paula);		
-		Person olaf = new Person("Olaf", 99);
-		Person inge = new Person("Inge", 75);
-		personen.add(0, olaf);
-		personen.add(4, inge);
+		Map<String, Person> personMap = new HashMap();
+		personMap.put(peter.name, peter);
+		personMap.put(paula.name, paula);
+		personMap.put(paul.name, paul);
 		
-		for(Person p : personen){
-			System.out.println(p);
-		}
+		System.out.println("Anzahl Einträgen: "+personMap.size());
 		
-		System.out.println("Länge der Liste: "+personen.size());
-//		System.out.println(personen.isEmpty());
-		System.out.println(personen.contains(inge));
-		if(personen.contains(inge)){
-			personen.remove(inge);
-		}
-		System.out.println(personen.contains(inge));
-		
-		personen.remove(personen.indexOf(paul));
-		
-		for(Person p : personen){
-			System.out.println(p);
-		}
 	}
 
 }
