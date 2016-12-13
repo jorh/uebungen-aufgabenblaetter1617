@@ -20,6 +20,8 @@ import java.awt.Color;
 import gridworld.framework.actor.ActorWorld;
 import gridworld.framework.actor.Bug;
 import gridworld.framework.actor.Rock;
+import uebung9.BabyBug;
+import uebung9.Predator;
 
 /**
  * This class runs a world that contains a bug and a rock, added at random
@@ -34,6 +36,12 @@ public class BugRunner
     public static void main(String[] args)
     {
         ActorWorld world = new ActorWorld();
+        world.add(new Predator());
+        world.add(new BabyBug());
+        world.add(new BabyBug());
+        world.add(new BabyBug());
+        world.add(new Bug());
+        world.add(new Bug());
         world.add(new Bug());
         world.add(new Rock());
         world.show();
