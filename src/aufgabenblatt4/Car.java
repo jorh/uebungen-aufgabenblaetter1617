@@ -2,6 +2,7 @@ package aufgabenblatt4;
 import java.awt.Color;
 
 import gridworld.framework.actor.Actor;
+//unnötiger import
 import gridworld.framework.actor.Flower;
 import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
@@ -9,6 +10,9 @@ import gridworld.framework.grid.Location;
 //Autor: Jonathan Rhode
 
 public class Car extends Actor {
+	
+	//Soweit gut gelöst. Das Fahren / Bremsen sollte eigentlich eher über die speed-Variable gelöst werden.
+	//An manchen Stellen bitte mehr auf die Formatierung achten
 	
 	int speed = 5;
 	
@@ -29,14 +33,17 @@ public class Car extends Actor {
 		 	troedeln();
 	    }
 
+	 //Macht das Richtige, jedoch sollte eigentlich die Variable speed angepasst werden
 	 public void fahren(){
 		 int z=1;
+		 //auf Formatierung achten
 			while(z<=speed&&canMove()==true){
 				move();
 				z++;
 			}
 	 }
 	 
+	//Bitte lesbarer formatieren
 	 public void beschleunigen(){
 		 if(speed<5)speed++;
 	 }
