@@ -3,6 +3,10 @@ package aufgabenblatt4;
 import gridworld.framework.actor.Actor;
 
 public class CarSource extends Actor {
+	
+	//Gut!
+	
+	//besser: private
 	double wkeit;
 	
 	public CarSource (){
