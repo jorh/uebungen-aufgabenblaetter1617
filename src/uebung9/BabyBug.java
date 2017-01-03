@@ -1,13 +1,16 @@
 package uebung9;
 
 import java.awt.Color;
+import java.util.ArrayList;
+import java.util.List;
 
 import gridworld.framework.actor.Actor;
+import gridworld.framework.actor.Critter;
 import gridworld.framework.actor.Flower;
 import gridworld.framework.grid.Grid;
 import gridworld.framework.grid.Location;
 
-public class BabyBug extends DisposableBug {
+public class BabyBug extends Critter {
 
 	private int flowersEaten = 0;
 
@@ -18,7 +21,6 @@ public class BabyBug extends DisposableBug {
 	@Override
 	public void act() {
 		super.act();
-		eatFlowerAhead();
 		if (flowersEaten >= 3) {
 			Location location = getLocation();
 			Grid grid = getGrid();
@@ -32,34 +34,16 @@ public class BabyBug extends DisposableBug {
 			}
 		}
 	}
-
+	
 	@Override
-	public void move() {
-		Grid<Actor> gr = getGrid();
-		if (gr == null) {
-			return;
-		}
-
-		Location loc = getLocation();
-		Location next = loc.getAdjacentLocation(getDirection());
-		if (gr.isValid(next))
-			moveTo(next);
-		else
-			removeSelfFromGrid();
-	}
-
-	private void eatFlowerAhead() {
-		Grid<Actor> gr = getGrid();
-		if (gr == null)
-			return;
-		Location loc = getLocation();
-		Location next = loc.getAdjacentLocation(getDirection());
-		if (!gr.isValid(next))
-			return;
-		Actor neighbor = gr.get(next);
-		if (neighbor instanceof Flower) {
-			neighbor.removeSelfFromGrid();
-			flowersEaten++;
+	public void processActors(ArrayList<Actor> actors){
+		
+		List<Flower> flowers = new ArrayList<>();
+		
+		for(Actor actor : actors){
+			if(actor instanceof Flower){
+				flowers.add((Flower) actor); 
+			}
 		}
 	}
 }
