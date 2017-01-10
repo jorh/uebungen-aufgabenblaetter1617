@@ -2,6 +2,9 @@ package uebung11;
 
 
 
+import java.util.HashMap;
+import java.util.Map;
+
 import javafx.application.*;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
@@ -28,6 +31,7 @@ public class GUIProgrammierung extends Application {
 		RoadTrafficSimulator straﬂe = new RoadTrafficSimulator();
         BorderPane mainPane = new BorderPane();
         Pane simulationPane = new Pane();
+        Map<Integer, Text> texts = new HashMap();
         for(Node node : straﬂe.getNodes().values()){
         	Circle kreis = new Circle(node.getCoordinateX(),node.getCoordinateY(),3);
         	simulationPane.getChildren().add(kreis);
@@ -38,6 +42,7 @@ public class GUIProgrammierung extends Application {
 			Line linie = new Line(startNode.getCoordinateX(),startNode.getCoordinateY(),endNode.getCoordinateX(),endNode.getCoordinateY());
         	simulationPane.getChildren().add(linie);
         	Text text = new Text(startNode.getCoordinateX(),startNode.getCoordinateY(), "Belastung: "+link.getOccupation());
+        	texts.put(link.getId(), text);
         	simulationPane.getChildren().add(text);
         }
         Button button = new Button("Increase volume");
@@ -45,6 +50,10 @@ public class GUIProgrammierung extends Application {
         	@Override
         	public void handle(ActionEvent event){
         		straﬂe.increaseTrafficVolume();
+        		for( Link link : straﬂe.getLinks().values()) {
+        			Text text = texts.get(link.getId());
+        			text.setText("Belastung: "+link.getOccupation());
+        		}
         	}
         });
         mainPane.setTop(button);
