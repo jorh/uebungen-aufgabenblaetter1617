@@ -3,9 +3,9 @@ package aufgabenblatt5;
 class GalaxyElement {
 	
 	private String name;
-	private int groeﬂe = 2;
-	private int x = 10;
-	private int y = 10;
+	private int groeﬂe = 200;
+	private int x = 1000;
+	private int y = 1000;
 	
 	
 	public GalaxyElement(String name){
@@ -21,7 +21,7 @@ class GalaxyElement {
 	
 	@Override
 	public String toString(){
-		String str = getName()+" hat einen Durchmesser von "+getGroeﬂe()+ " km groﬂ und befindet sich bei: "+getX()+","+getY()+".";
+		String str = getName()+" hat einen Durchmesser von "+getGroeﬂe()+ " km und befindet sich bei: "+getX()+", "+getY()+".";
 		return str;
 	}
 	
