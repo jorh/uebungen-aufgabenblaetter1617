@@ -29,7 +29,9 @@ final class Planet extends GalaxyElement implements Moveable {
 	}
 	
 	public void move(){
-		setX() = abstand*Math.cos(winkel);		
+		setX(abstand*Math.cos(winkel)+getX());	
+		setY(abstand*Math.sin(winkel)+getY());
 		winkel = winkel+drehwinkel;
+		System.out.println(getName()+" hat sich bewegt");
 	}
 }

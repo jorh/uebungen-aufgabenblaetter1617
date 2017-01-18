@@ -21,6 +21,11 @@ class Galaxy {
 		for(GalaxyElement ge : universum){
 			System.out.println(ge);
 		}
+		erde.move();
+		for(GalaxyElement ge : universum){
+			System.out.println(ge);
+		}
+		
 	}
 
 }
