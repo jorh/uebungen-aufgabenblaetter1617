@@ -4,15 +4,15 @@ class GalaxyElement {
 	
 	private String name;
 	private int groeﬂe = 200;
-	private int x = 1000;
-	private int y = 1000;
+	private double x = 1000;
+	private double y = 1000;
 	
 	
 	public GalaxyElement(String name){
 		this.setName(name);
 	}
 	
-	public GalaxyElement(String name, int groeﬂe, int x, int y){
+	public GalaxyElement(String name, int groeﬂe, double x, double y){
 		this.setName(name);
 		this.setGroeﬂe(groeﬂe);
 		this.setX(x);
@@ -21,7 +21,9 @@ class GalaxyElement {
 	
 	@Override
 	public String toString(){
-		String str = getName()+" hat einen Durchmesser von "+getGroeﬂe()+ " km und befindet sich bei: "+getX()+", "+getY()+".";
+		String str = getName()+": \n";
+		str = str+"Durchmesser: "+getGroeﬂe()+ " km \n";
+		str = str+"Position: "+getX()+", "+getY();
 		return str;
 	}
 	
@@ -45,19 +47,19 @@ class GalaxyElement {
 		this.groeﬂe = groeﬂe;
 	}
 
-	public int getX() {
+	public double getX() {
 		return x;
 	}
 
-	public void setX(int x) {
+	public void setX(double x) {
 		this.x = x;
 	}
 
-	public int getY() {
+	public double getY() {
 		return y;
 	}
 
-	public void setY(int y) {
+	public void setY(double y) {
 		this.y = y;
 	}
 }

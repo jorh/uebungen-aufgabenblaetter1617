@@ -1,14 +1,35 @@
 package aufgabenblatt5;
 
-final class Planet extends GalaxyElement {
+final class Planet extends GalaxyElement implements Moveable {
 
-	public Planet(String name) {
-		super(name);
+	final public double drehwinkel = (Math.PI/4);
+	private Sun sonne;
+	private int abstand;
+	private double winkel = drehwinkel;
+
+
+	public Planet(String name, int groeﬂe, Sun sonne) {
+		super(name, groeﬂe, sonne.getX()+1000, sonne.getY());
+		this.sonne = sonne;
+		abstand = 1000;
 
 	}
 
-	public Planet(String name, int groeﬂe, int x, int y) {
-		super(name, groeﬂe, x, y);
+	public Planet(String name, int groeﬂe, Sun sonne, int abstand) {
+		super(name, groeﬂe, sonne.getX()+abstand, sonne.getY());
+		this.sonne = sonne;
+		this.abstand = abstand;
 	}
-
+	
+	@Override
+	public String toString(){
+		String str = "Planet "+super.toString()+"\n";
+		str = str+"Enfernung zum Stern "+sonne.getName()+": "+abstand+" km";
+		return str;
+	}
+	
+	public void move(){
+		setX() = abstand*Math.cos(winkel);		
+		winkel = winkel+drehwinkel;
+	}
 }

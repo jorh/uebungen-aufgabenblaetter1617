@@ -13,6 +13,6 @@ final class Sun extends GalaxyElement {
 	@Override
 	
 	public String toString(){
-		return "Die Sonne "+ super.toString();
+		return "Stern "+ super.toString();
 	}
 }
