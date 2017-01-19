@@ -11,8 +11,7 @@ final class Sun extends GalaxyElement {
 	}
 	
 	@Override
-	
 	public String toString(){
-		return "Stern "+ super.toString();
+		return "\nStern "+ super.toString();
 	}
 }

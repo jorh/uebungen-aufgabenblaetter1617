@@ -3,13 +3,16 @@ package aufgabenblatt5;
 class GalaxyElement {
 	
 	private String name;
-	private int groeﬂe = 200;
-	private double x = 1000;
-	private double y = 1000;
+	private int groeﬂe;
+	private double x;
+	private double y;
 	
 	
 	public GalaxyElement(String name){
 		this.setName(name);
+		groeﬂe = 200;
+		x = 1000;
+		y = 1000;
 	}
 	
 	public GalaxyElement(String name, int groeﬂe, double x, double y){

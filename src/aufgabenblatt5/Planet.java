@@ -23,15 +23,15 @@ final class Planet extends GalaxyElement implements Moveable {
 	
 	@Override
 	public String toString(){
-		String str = "Planet "+super.toString()+"\n";
-		str = str+"Enfernung zum Stern "+sonne.getName()+": "+abstand+" km";
+		String str = "\nPlanet "+super.toString();
+		str = str+"\nEnfernung zum Stern "+sonne.getName()+": "+abstand+" km";
 		return str;
 	}
 	
 	public void move(){
-		setX(abstand*Math.cos(winkel)+getX());	
-		setY(abstand*Math.sin(winkel)+getY());
-		winkel = winkel+drehwinkel;
+		setX(abstand*Math.cos(winkel)+sonne.getX());	
+		setY(abstand*Math.sin(winkel)+sonne.getY());
 		System.out.println(getName()+" hat sich bewegt");
+		winkel = winkel+drehwinkel;
 	}
 }
