@@ -1,6 +1,6 @@
 package aufgabenblatt5;
 
-class GalaxyElement {
+class GalaxyElement implements Comparable<GalaxyElement>{
 	
 	private String name;
 	private int groeﬂe;
@@ -64,5 +64,18 @@ class GalaxyElement {
 
 	public void setY(double y) {
 		this.y = y;
+	}
+
+
+	@Override
+	public int compareTo(GalaxyElement ge) {
+		if(this.getGroeﬂe()>ge.getGroeﬂe()){
+			return 1;
+		} else if (this.getGroeﬂe() == ge.getGroeﬂe()){
+			return 0;
+		} else {
+			return -1;
+		}
+
 	}
 }

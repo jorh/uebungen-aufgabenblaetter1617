@@ -1,6 +1,8 @@
 package aufgabenblatt5;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 
 class Galaxy {
 
@@ -12,18 +14,23 @@ class Galaxy {
 		Sun sonne = new Sun("Sonne", 5000, 1000,1000);
 		Planet erde = new Planet("Erde", 2000, sonne, 500);
 		Planet merkur = new Planet("Merkur",1000, sonne);
+		SpaceShip voyagerII = new SpaceShip("Voyager II", 1, -4000,-2000, -50,30);
 		SpaceShip voyagerI = new SpaceShip("Voyager I");
-		SpaceShip voyagerII = new SpaceShip("Voyager II", 3, -4000,-2000, -50,30);
 		// Hinzufügen zur Liste
 		universum.add(sonne);
 		universum.add(merkur);
 		universum.add(erde);
 		universum.add(alphaCentauri);
-		universum.add(voyagerI);
 		universum.add(voyagerII);
-		for(int i=0;i<=10;i++){
+		universum.add(voyagerI);
+		ausgeben(universum);
+		Collections.sort(universum);
+		Collections.s
+		//Mehrfachausgabe
+		for(int i=0;i<=1;i++){
 			ausgeben(universum);
 		}
+		
 		
 	}
 	
