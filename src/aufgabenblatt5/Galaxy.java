@@ -25,7 +25,6 @@ class Galaxy {
 		universum.add(voyagerI);
 		ausgeben(universum);
 		Collections.sort(universum);
-		Collections.s
 		//Mehrfachausgabe
 		for(int i=0;i<=1;i++){
 			ausgeben(universum);
