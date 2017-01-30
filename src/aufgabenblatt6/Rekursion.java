@@ -10,7 +10,12 @@ public class Rekursion {
 	
 	private static int ggT(int a, int b){
 		System.out.print("ggT(" + a + "," + b + ") = ");
-		
+		int r=a%b;
+		if(r!=0){
+			ggT(b,r);
+		}else{
+			System.out.print("ggT(" + b + "," + r + ") = ");
+		}
 		// TODO calculate ggT recursively with Euklid's algorithm
 		return 0;
 	}

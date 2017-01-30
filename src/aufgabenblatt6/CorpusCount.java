@@ -3,17 +3,21 @@ package aufgabenblatt6;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 public class CorpusCount {
 
+	ArrayList<Entry> woerter = new ArrayList<Entry>();
+	
 	public static void main(String[] args) throws IOException {
 		new CorpusCount().run();
 	}
 
 	void run() throws IOException {
-		readFile("files/emma.txt");
-		readFile("files/sense.txt");
-		readFile("files/persuasion.txt");
+		readFile("src/aufgabenblatt6/test.txt");
+		readFile("src/aufgabenblatt6/bibel.txt");
 		sort();
 		write();
 	}
@@ -32,17 +36,22 @@ public class CorpusCount {
 	}
 
 	private void countWord(String word) {
-		// TODO Auto-generated method stub
-		
+		for (Entry wort : woerter){
+			if(wort.getWort().equals(word)){
+				wort.counter();
+				return;
+			}
+		}
+		woerter.add(new Entry (word));
 	}
 
 	private void sort() {
-		// TODO Auto-generated method stub
-
+		Collections.sort((List<Entry>) woerter);
 	}
 
 	private void write() {
-		// TODO Auto-generated method stub
-
+		for(Entry wort : woerter){
+			System.out.println(wort);
+		}
 	}
 }
