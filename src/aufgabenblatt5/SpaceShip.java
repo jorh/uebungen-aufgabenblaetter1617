@@ -1,6 +1,8 @@
 package aufgabenblatt5;
 
 final class SpaceShip extends GalaxyElement implements Moveable, Destroyable{
+	
+	//Sehr gut.
 
 	private double vX;
 	private double vY;
@@ -12,8 +14,8 @@ final class SpaceShip extends GalaxyElement implements Moveable, Destroyable{
 		setvY(20);
 	}
 	
-	public SpaceShip(String name, int groeﬂe, double x, double y, double vX, double vY){
-		super(name, groeﬂe, x, y);
+	public SpaceShip(String name, int groe√üe, double x, double y, double vX, double vY){
+		super(name, groe√üe, x, y);
 		this.setvX(vX);
 		this.setvY(vY);
 	}
@@ -59,7 +61,7 @@ final class SpaceShip extends GalaxyElement implements Moveable, Destroyable{
 	@Override
 	public boolean isDestroyed() {
 		if(energy <= 0){
-			System.err.print("Raumschiff "+getName()+" wurde zerstˆrt!\n");
+			System.err.print("Raumschiff "+getName()+" wurde zerst√∂rt!\n");
 			return true;
 		}
 		return false;
