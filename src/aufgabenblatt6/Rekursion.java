@@ -1,6 +1,8 @@
 package aufgabenblatt6;
 
 public class Rekursion {
+	
+	//sehr gut
 
 	public static void main(String[] args) {
 		int a = 36;
