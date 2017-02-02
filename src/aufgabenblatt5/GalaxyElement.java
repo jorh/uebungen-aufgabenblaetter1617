@@ -2,22 +2,26 @@ package aufgabenblatt5;
 
 class GalaxyElement implements Comparable<GalaxyElement>{
 	
+	//Soweit richtig, kleine Anmerkung s.u.
+	
+	//um den Zugriff erbenden Klassen zu erlauben, waere protected heir besser
+	//gewesen. Wenn du setter benutzen willst, dann stelle diese auf protected
 	private String name;
-	private int groeﬂe;
+	private int groe√üe;
 	private double x;
 	private double y;
 	
 	
 	public GalaxyElement(String name){
 		this.setName(name);
-		groeﬂe = 200;
+		groe√üe = 200;
 		x = 1000;
 		y = 1000;
 	}
 	
-	public GalaxyElement(String name, int groeﬂe, double x, double y){
+	public GalaxyElement(String name, int groe√üe, double x, double y){
 		this.setName(name);
-		this.setGroeﬂe(groeﬂe);
+		this.setGroe√üe(groe√üe);
 		this.setX(x);
 		this.setY(y);
 	}
@@ -25,10 +29,11 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 	@Override
 	public String toString(){
 		String str = getName()+": \n";
-		str = str+"Durchmesser: "+getGroeﬂe()+ " km \n";
+		str = str+"Durchmesser: "+getGroe√üe()+ " km \n";
 		str = str+"Position: "+getX()+", "+getY();
 		return str;
 	}
+	
 	
 	/*
 	 * Getter and Setter
@@ -42,12 +47,12 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 		this.name = name;
 	}
 
-	public int getGroeﬂe() {
-		return groeﬂe;
+	public int getGroe√üe() {
+		return groe√üe;
 	}
 
-	public void setGroeﬂe(int groeﬂe) {
-		this.groeﬂe = groeﬂe;
+	public void setGroe√üe(int groe√üe) {
+		this.groe√üe = groe√üe;
 	}
 
 	public double getX() {
@@ -69,9 +74,9 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 
 	@Override
 	public int compareTo(GalaxyElement ge) {
-		if(this.getGroeﬂe()>ge.getGroeﬂe()){
+		if(this.getGroe√üe()>ge.getGroe√üe()){
 			return 1;
-		} else if (this.getGroeﬂe() == ge.getGroeﬂe()){
+		} else if (this.getGroe√üe() == ge.getGroe√üe()){
 			return 0;
 		} else {
 			return -1;
