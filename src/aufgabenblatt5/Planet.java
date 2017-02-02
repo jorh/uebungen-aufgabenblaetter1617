@@ -1,22 +1,28 @@
 package aufgabenblatt5;
 
 final class Planet extends GalaxyElement implements Moveable {
+	
+	//Richtig, kleine Anmerkung s.u.
 
+	//Warum public? Konstanten am besten immer static machen.
+	//Ansonsten wird die Konstante fuer jedes Planet-Objekt
+	//extra gespeichert. Laut Konvention Konstanten dann
+	//immer upper case schreiben: DREHWINKEL
 	final public double drehwinkel = (Math.PI/4);
 	private Sun sonne;
 	private int abstand;
 	private double winkel = drehwinkel;
 
 
-	public Planet(String name, int groeﬂe, Sun sonne) {
-		super(name, groeﬂe, sonne.getX()+1000, sonne.getY());
+	public Planet(String name, int groe√üe, Sun sonne) {
+		super(name, groe√üe, sonne.getX()+1000, sonne.getY());
 		this.sonne = sonne;
 		abstand = 1000;
 
 	}
 
-	public Planet(String name, int groeﬂe, Sun sonne, int abstand) {
-		super(name, groeﬂe, sonne.getX()+abstand, sonne.getY());
+	public Planet(String name, int groe√üe, Sun sonne, int abstand) {
+		super(name, groe√üe, sonne.getX()+abstand, sonne.getY());
 		this.sonne = sonne;
 		this.abstand = abstand;
 	}
