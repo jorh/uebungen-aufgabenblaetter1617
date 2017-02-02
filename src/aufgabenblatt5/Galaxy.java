@@ -8,6 +8,8 @@ import java.util.TreeMap;
 
 
 class Galaxy {
+	
+	//Sehr gut
 
 	public static void main(String[] args) {
 		
@@ -46,7 +48,7 @@ class Galaxy {
 	
 	private static void arrayList(ArrayList<GalaxyElement> universum, Sun alphaCentauri, Sun sonne, Planet erde,
 			Planet merkur, SpaceShip voyagerII, SpaceShip voyagerI) {
-		// Hinzufügen zur Liste
+		// HinzufÃ¼gen zur Liste
 		universum.add(sonne);
 		universum.add(merkur);
 		universum.add(erde);
