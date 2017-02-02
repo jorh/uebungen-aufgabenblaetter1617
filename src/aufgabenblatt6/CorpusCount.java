@@ -8,6 +8,8 @@ import java.util.Collections;
 import java.util.List;
 
 public class CorpusCount {
+	
+	//sehr gut!
 
 	ArrayList<Entry> woerter = new ArrayList<Entry>();
 	
