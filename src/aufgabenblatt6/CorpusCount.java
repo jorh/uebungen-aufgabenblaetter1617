@@ -18,8 +18,8 @@ public class CorpusCount {
 	}
 
 	void run() throws IOException {
-		readFile("src/aufgabenblatt6/test.txt");
-		readFile("src/aufgabenblatt6/bibel.txt");
+		readFile("src/klausurtestklassen/testtext.txt");
+//		readFile("src/aufgabenblatt6/bibel.txt");
 		sort();
 		write();
 	}
@@ -29,7 +29,7 @@ public class CorpusCount {
 		BufferedReader br = new BufferedReader(fr);
 		String line;
 		while ((line = br.readLine()) != null) {
-			String[] words = line.split(" ");
+			String[] words = line.split(" +");
 			for (String word : words) {
 				countWord(word);
 			}

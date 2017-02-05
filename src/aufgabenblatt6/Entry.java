@@ -3,7 +3,7 @@ package aufgabenblatt6;
 
 public class Entry implements Comparable<Entry> {
 	String word;
-	int count = 1;
+	long count = 1;
 	
 	public Entry (String word){
 		this.word = word;
@@ -16,7 +16,7 @@ public class Entry implements Comparable<Entry> {
 		return word;
 	}
 	
-	public int getCount(){
+	public long getCount(){
 		return count;
 	}
 	

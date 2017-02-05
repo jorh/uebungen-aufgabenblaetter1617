@@ -4,7 +4,7 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 	
 	//Soweit richtig, kleine Anmerkung s.u.
 	
-	//um den Zugriff erbenden Klassen zu erlauben, waere protected heir besser
+	//um den Zugriff erbenden Klassen zu erlauben, waere protected hier besser
 	//gewesen. Wenn du setter benutzen willst, dann stelle diese auf protected
 	private String name;
 	private int groeße;
@@ -21,7 +21,7 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 	
 	public GalaxyElement(String name, int groeße, double x, double y){
 		this.setName(name);
-		this.setGroeße(groeße);
+		this.setGroe�e(groeße);
 		this.setX(x);
 		this.setY(y);
 	}
@@ -29,7 +29,7 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 	@Override
 	public String toString(){
 		String str = getName()+": \n";
-		str = str+"Durchmesser: "+getGroeße()+ " km \n";
+		str = str+"Durchmesser: "+getGroe�e()+ " km \n";
 		str = str+"Position: "+getX()+", "+getY();
 		return str;
 	}
@@ -43,15 +43,15 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 		return name;
 	}
 
-	public void setName(String name) {
+	protected void setName(String name) {
 		this.name = name;
 	}
 
-	public int getGroeße() {
+	public int getGroe�e() {
 		return groeße;
 	}
 
-	public void setGroeße(int groeße) {
+	protected void setGroe�e(int groeße) {
 		this.groeße = groeße;
 	}
 
@@ -59,7 +59,7 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 		return x;
 	}
 
-	public void setX(double x) {
+	protected void setX(double x) {
 		this.x = x;
 	}
 
@@ -67,16 +67,16 @@ class GalaxyElement implements Comparable<GalaxyElement>{
 		return y;
 	}
 
-	public void setY(double y) {
+	protected void setY(double y) {
 		this.y = y;
 	}
 
 
 	@Override
 	public int compareTo(GalaxyElement ge) {
-		if(this.getGroeße()>ge.getGroeße()){
+		if(this.getGroe�e()>ge.getGroe�e()){
 			return 1;
-		} else if (this.getGroeße() == ge.getGroeße()){
+		} else if (this.getGroe�e() == ge.getGroe�e()){
 			return 0;
 		} else {
 			return -1;

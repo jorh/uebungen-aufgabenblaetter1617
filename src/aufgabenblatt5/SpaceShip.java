@@ -54,14 +54,15 @@ final class SpaceShip extends GalaxyElement implements Moveable, Destroyable{
 	@Override
 	public void hit(double power) {
 		energy = energy-power;
+		if(energy <0)energy=0;
 		System.out.println("Raumschiff "+getName()+ " wurde getroffen \n"
-				+ "Verbleibende Energy: "+energy);
+				+ "Verbleibende Energie: "+energy);
 	}
 
 	@Override
 	public boolean isDestroyed() {
 		if(energy <= 0){
-			System.err.print("Raumschiff "+getName()+" wurde zerstört!\n");
+			System.err.print("Raumschiff "+getName()+" wurde zerstoert!\n");
 			return true;
 		}
 		return false;

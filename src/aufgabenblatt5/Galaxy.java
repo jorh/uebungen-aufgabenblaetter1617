@@ -3,6 +3,7 @@ package aufgabenblatt5;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.Map;
 import java.util.TreeMap;
 
@@ -22,33 +23,33 @@ class Galaxy {
 		Planet merkur = new Planet("Merkur",1000, sonne);
 		SpaceShip voyagerII = new SpaceShip("Voyager II", 1, -4000,-2000, -50,30);
 		SpaceShip voyagerI = new SpaceShip("Voyager I");
-		//arrayList(universum, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI);
-		//ausgabe(universum);
+		arrayList(universum, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI);
+		ausgabe(universum);
 		/*
 		 * TreeMap sortiert die Element nach ihrem Key, in diesem Fall also 
 		 * alphabetisch
 		 */
 		
-		map(sonnensystem, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI);
-		ausgabe(sonnensystem);
+//		map(sonnensystem, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI);
+//		ausgabe(sonnensystem);
 		
 		
 		
 	}
 
-	private static void map(Map<String, GalaxyElement> sonnensystem, Sun alphaCentauri, Sun sonne, Planet erde,
-			Planet merkur, SpaceShip voyagerII, SpaceShip voyagerI) {
-		sonnensystem.put(alphaCentauri.getName(), alphaCentauri);
-		sonnensystem.put(sonne.getName(), sonne);
-		sonnensystem.put(erde.getName(), erde);
-		sonnensystem.put(merkur.getName(), merkur);
-		sonnensystem.put(voyagerII.getName(), voyagerII);
-		sonnensystem.put(voyagerI.getName(), voyagerI);
-	}
+//	private static void map(Map<String, GalaxyElement> sonnensystem, Sun alphaCentauri, Sun sonne, Planet erde,
+//			Planet merkur, SpaceShip voyagerII, SpaceShip voyagerI) {
+//		sonnensystem.put(alphaCentauri.getName(), alphaCentauri);
+//		sonnensystem.put(sonne.getName(), sonne);
+//		sonnensystem.put(erde.getName(), erde);
+//		sonnensystem.put(merkur.getName(), merkur);
+//		sonnensystem.put(voyagerII.getName(), voyagerII);
+//		sonnensystem.put(voyagerI.getName(), voyagerI);
+//	}
 	
 	private static void arrayList(ArrayList<GalaxyElement> universum, Sun alphaCentauri, Sun sonne, Planet erde,
 			Planet merkur, SpaceShip voyagerII, SpaceShip voyagerI) {
-		// Hinzufügen zur Liste
+		// Hinzufuegen zur Liste
 		universum.add(sonne);
 		universum.add(merkur);
 		universum.add(erde);
@@ -61,7 +62,7 @@ class Galaxy {
 		ausgeben(universum);
 		Collections.sort(universum);
 		//Mehrfachausgabe
-		for(int i=0;i<=1;i++){
+		for(int i=0;i<=10;i++){
 			ausgeben(universum);
 		}
 	}
@@ -95,8 +96,8 @@ class Galaxy {
 	}
 	
 	private static void ausgeben(ArrayList<GalaxyElement> universum) {
-		ArrayList<SpaceShip> destroyed = new ArrayList<SpaceShip>();
-		for(GalaxyElement ge : universum){
+		for(Iterator<GalaxyElement> it = universum.iterator(); it.hasNext();){
+			GalaxyElement ge = it.next();
 			System.out.println(ge);
 			if(ge instanceof Moveable){
 				((Moveable) ge).move();
@@ -104,12 +105,9 @@ class Galaxy {
 			if(ge instanceof Destroyable){
 				((Destroyable) ge).hit(Math.random()*25);
 				if(((Destroyable) ge).isDestroyed()){
-					destroyed.add((SpaceShip) ge);
+					it.remove();
 				}
 			}
-		}
-		for (SpaceShip s : destroyed){
-			universum.remove(s);
 		}
 		System.out.println("-------------------------------------------");
 	}
