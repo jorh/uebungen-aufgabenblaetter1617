@@ -33,19 +33,6 @@ class Probetest {
 		}
 	}
 	
-	private static void wurzelZiehen (long wurzel){
-		long i = 1;
-		while(i*i < wurzel){
-			i++;
-			if(wurzel<=0){
-				System.err.println("Negative Zahl!");
-				break;
-			}
-			if(i*i==wurzel){
-				System.out.println("Die Wurzel von "+wurzel+" ist "+i);
-			}
-		}
-	}
 	
 	public static void main (String[]args){
 //		zähler();
@@ -64,9 +51,7 @@ class Probetest {
 //		aa.speak();
 //		((Dog) bb).bark();
 //		liste();
-//		wurzelZiehen(25);
-		wurzelZiehen(-5);
-		wurzelZiehen(0);
-		wurzelZiehen(23689267);
+
+
 	}
 }
