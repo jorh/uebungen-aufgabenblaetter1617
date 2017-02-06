@@ -23,7 +23,7 @@ class Galaxy {
 		Planet merkur = new Planet("Merkur",1000, sonne);
 		SpaceShip voyagerII = new SpaceShip("Voyager II", 1, -4000,-2000, -50,30);
 		SpaceShip voyagerI = new SpaceShip("Voyager I");
-		arrayList(universum, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI);
+		arrayList(new ArrayListParameter(universum, alphaCentauri, sonne, erde, merkur, voyagerII, voyagerI));
 		ausgabe(universum);
 		/*
 		 * TreeMap sortiert die Element nach ihrem Key, in diesem Fall also 
@@ -47,15 +47,14 @@ class Galaxy {
 //		sonnensystem.put(voyagerI.getName(), voyagerI);
 //	}
 	
-	private static void arrayList(ArrayList<GalaxyElement> universum, Sun alphaCentauri, Sun sonne, Planet erde,
-			Planet merkur, SpaceShip voyagerII, SpaceShip voyagerI) {
+	private static void arrayList(ArrayListParameter parameterObject) {
 		// Hinzufuegen zur Liste
-		universum.add(sonne);
-		universum.add(merkur);
-		universum.add(erde);
-		universum.add(alphaCentauri);
-		universum.add(voyagerII);
-		universum.add(voyagerI);
+		parameterObject.universum.add(parameterObject.sonne);
+		parameterObject.universum.add(parameterObject.merkur);
+		parameterObject.universum.add(parameterObject.erde);
+		parameterObject.universum.add(parameterObject.alphaCentauri);
+		parameterObject.universum.add(parameterObject.voyagerII);
+		parameterObject.universum.add(parameterObject.voyagerI);
 	}
 
 	private static void ausgabe(ArrayList<GalaxyElement> universum) {

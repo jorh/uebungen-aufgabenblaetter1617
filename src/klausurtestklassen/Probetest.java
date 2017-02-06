@@ -51,6 +51,13 @@ class Probetest {
 //		aa.speak();
 //		((Dog) bb).bark();
 //		liste();
+		System.out.println("|-------------------|");
+		System.out.println("|   Dies ist ein    |");
+		System.out.println("|     Songtext      |");
+		for(int i=0;i<10;i++){
+			System.out.println("|"+HelloWorld.sayHelloGoodbye()+"|");
+		}
+		System.out.println("|-------------------|");
 
 
 	}
